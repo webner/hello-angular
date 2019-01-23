@@ -29,9 +29,9 @@ pipeline {
             }
         }
 
-        stage("deploy") {
+        stage("build image") {
             steps {
-                sh "oc status"
+                sh "oc start-build hello-angular -F --from-dir=dist/hello-angular"
             }
         }
 
