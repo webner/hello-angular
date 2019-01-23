@@ -7,7 +7,7 @@ pipeline {
 
         stage("build") {
             steps {
-                sh "echo build"
+                sh "ng build"
             }
         }
 
@@ -19,7 +19,7 @@ pipeline {
 
         stage("deploy") {
             steps {
-                sh "echo deploy"
+                sh "oc status"
             }
         }
 
